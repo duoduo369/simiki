@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="Stylesheet" type="text/css"
+          href="{{ site.root }}/static/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="keywords" content="{{ site.keywords }}"/>
+    <meta name="description" content="{{ site.description }}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <div class="container">
+      {% block container %}
+      {% endblock %}
+      <footer class="footer">
+        Copyright © 2012-2014 {{ site.author }}.
+        Powered by <a href="http://simiki.org/" target="_blank">Simiki</a>.
+      </footer>
+    </div>
+    {% include "stat.html" %}
+    <script type="text/javascript" src="{{ site.root }}/static/js/jquery-1.11.1.min.js">
+    </script>
+    <script type="text/javascript" src="{{ site.root }}/static/js/bootstrap.min.js">
+    </script>
+  </body>
+</html>

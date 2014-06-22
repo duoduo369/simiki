@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ site.title }}{% endblock %}
+
+{% block container %}
+  <header>
+    <ol class="breadcrumb">
+      {% if not default_home_page %}
+      <li><a href="{{ site.root }}/">Home</a></li>
+        {%- if page.category %}
+          <li><a href="{{ site.root }}/#{{ page.category }}">{{ page.category }}</a></li>
+        {%- endif %}
+        <li>{{ page.title }}</li>
+      {% endif %}
+    </ol>
+  </header>
+  <div class="clearfix"></div>
+  <div class="jumbotron">
+    <h1>{{ page.title }}</h1>
+  </div>
+  <div class="content">
+    {{ page.content }}
+  </div>
+{% endblock %}
